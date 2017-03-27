@@ -2,6 +2,10 @@
 
 %global sname sushy
 
+%if 0%{?fedora}
+%global with_python3 1
+%endif
+
 Name: python-%{sname}
 Version: XXX
 Release: XXX
@@ -117,7 +121,7 @@ install -d -m 755 %{buildroot}%{_localstatedir}/log/%{sname}
 
 %if 0%{?with_python3}
 
-%files python3-%{sname}
+%files -n python3-%{sname}
 %license LICENSE
 %{python3_sitelib}/%{sname}
 %{python3_sitelib}/%{sname}-*.egg-info
