@@ -25,15 +25,12 @@ Summary: Sushy is a Python library to communicate with Redfish based systems (ht
 %{?python_provide:%python_provide python2-%{sname}}
 
 BuildRequires: python2-devel
-BuildRequires: python-pbr
+BuildRequires: python2-pbr
 BuildRequires: python-setuptools
-BuildRequires: git
 
-Requires: python-pbr >= 2.0.0
+Requires: python2-pbr >= 2.0.0
 Requires: python-six >= 1.9.0
 Requires: python-requests
-
-Requires(pre): shadow-utils
 
 %description -n python2-%{sname}
 Sushy is a Python library to communicate with Redfish based systems (http://redfish.dmtf.org)
@@ -54,7 +51,6 @@ Summary: Sushy is a Python library to communicate with Redfish based systems (ht
 BuildRequires: python3-devel
 BuildRequires: python3-pbr
 BuildRequires: python3-setuptools
-BuildRequires: python3-git
 
 Requires: python3-pbr >= 2.0.0
 Requires: python3-six >= 1.9.0
